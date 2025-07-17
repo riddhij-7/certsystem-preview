@@ -24,7 +24,7 @@ const { name, role, category, id, date_of_issue } = Astro.props;
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: #f8f9fa;
+            background-color: #ffffff;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -33,11 +33,9 @@ const { name, role, category, id, date_of_issue } = Astro.props;
         }
 
         .certificate-container {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
             padding: 40px;
-            max-width: 800px;
+            max-width: 1000px;
             width: 100%;
             position: relative;
         }
@@ -50,18 +48,19 @@ const { name, role, category, id, date_of_issue } = Astro.props;
         }
 
         .logo {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
+            margin-top: -20px;
         }
 
         .logo img {
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
             object-fit: contain;
         }
 
@@ -77,9 +76,9 @@ const { name, role, category, id, date_of_issue } = Astro.props;
         }
 
         .header-text p {
-            font-size: 1.4rem;
+            font-size: 1.8rem;
             color: #2d5a3d;
-            font-weight: 400;
+            font-weight: 500;
         }
 
         .content {
@@ -94,8 +93,8 @@ const { name, role, category, id, date_of_issue } = Astro.props;
         }
 
         .certificate-info p {
-            font-size: 1.1rem;
-            color: #4b5563;
+            font-size: 1.2rem;
+            color: #000000;
             margin-bottom: 10px;
         }
 
@@ -112,14 +111,14 @@ const { name, role, category, id, date_of_issue } = Astro.props;
         }
 
         .certificate-details p {
-            font-size: 1.1rem;
-            color: #374151;
+            font-size: 1.2rem;
+            color: #000000;
             margin-bottom: 8px;
         }
 
         .role {
             font-style: italic;
-            color: #6b7280;
+            color:rgb(38, 38, 38);
         }
 
         .date {
@@ -140,11 +139,12 @@ const { name, role, category, id, date_of_issue } = Astro.props;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: -120px;
         }
 
         .badge {
-            width: 280px;
-            height: 320px;
+            width: 340px;
+            height: 380px;
             object-fit: contain;
         }
 
@@ -202,8 +202,8 @@ const { name, role, category, id, date_of_issue } = Astro.props;
             }
 
             .badge {
-                width: 220px;
-                height: 250px;
+                width: 260px;
+                height: 300px;
             }
         }
 
@@ -249,7 +249,7 @@ const { name, role, category, id, date_of_issue } = Astro.props;
 
                 <div class="divider"></div>
 
-                <a href="https://forengers.in" class="home-button">
+                <a href="https://www.forengers.in/" class="home-button">
                     Go to Home Page
                 </a>
             </div>
@@ -261,7 +261,7 @@ const { name, role, category, id, date_of_issue } = Astro.props;
 
         <div class="footer">
             <p>
-                Website: forengers.in | Certificate ID: {id} | Issued by: Forengers Foundation
+                Website: <a href="https://www.forengers.in/" target="_blank" rel="noopener noreferrer">forengers.in</a> | Certificate ID: {id} | Issued by: Forengers Foundation
             </p>
         </div>
     </div>
