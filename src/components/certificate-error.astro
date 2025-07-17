@@ -1,0 +1,269 @@
+---
+// src/pages/index.astro
+---
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forengers Foundation - Certificate Verification</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <header>
+                <div class="header-row">
+                    <img src="/forengers-logo.png" alt="Forengers Foundation Logo" class="logo" />
+                    <h1>Forengers Foundation</h1>
+                </div>
+                <p class="subtitle">Certificate Verification</p>
+            </header>
+            
+            <main>
+                <div class="error-section">
+                    <h2 class="error-title">OOPS!</h2>
+                    <p class="error-subtitle">Invalid Certificate</p>
+                    
+                    <div class="error-message">
+                        <p class="error-message-main"><strong>We couldn't verify this certificate.</strong></p>
+                        <div class="error-message-left">
+                            <p>Please double check the link or Certificate ID.</p>
+                            <p>If you believe this is an error, contact our support team at <a href="mailto:support@forengers.org">support@forengers.org</a>.</p>
+                        </div>
+                    </div>
+                    
+                    <a href="https://www.forengers.in/" target="_blank" rel="noopener noreferrer">
+                        <button class="home-button">Go to Home Page</button>
+                    </a>
+                </div>
+            </main>
+        </div>
+        
+        <div class="background-image">
+            <img src="/Errorimg.png" alt="Error illustration" />
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+    
+    .container {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        max-width: 900px;
+        width: 100%;
+        min-height: 500px;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .content {
+        flex: 1;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+    }
+    
+    header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .header-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        margin-bottom: 8px;
+    }
+    
+    .logo {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 0;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+        color: #2d5a3d;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+    
+    .subtitle {
+        color: #205c36;
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+    
+    .error-section {
+        text-align: center;
+    }
+    
+    .error-title {
+        font-size: 4rem;
+        color: #2d5a3d;
+        font-weight: 700;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+    }
+    
+    .error-subtitle {
+        font-size: 1.4rem;
+        color: #205c36;
+        margin-bottom: 30px;
+        font-weight: 500;
+    }
+    
+    .error-message {
+        margin-bottom: 40px;
+        line-height: 1.6;
+    }
+    
+    .error-message p {
+        color: #374151;
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+    
+    .error-message a {
+        color: #2d5a3d;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    
+    .error-message a:hover {
+        text-decoration: underline;
+    }
+    
+    .home-button {
+        background: white;
+        color: #205c36;
+        border: 2px solid #205c36;
+        padding: 12px 30px;
+        border-radius: 25px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .home-button:hover {
+        background: #205c36;
+        color: #fff;
+        border-color: #205c36;
+        transform: translateY(-2px);
+    }
+    
+    .background-image {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+    
+    .background-image img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        opacity: 0.8;
+    }
+    
+    .error-message-left {
+        text-align: left;
+        font-size: 1.15rem;
+        color: #111;
+    }
+    .error-message-left strong {
+        font-size: 1.25rem;
+    }
+    .error-message-main {
+        text-align: left;
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+        color: #205c36;
+    }
+    
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            max-width: 500px;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .background-image {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            margin-top: 20px;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+        }
+        
+        .error-title {
+            font-size: 3rem;
+        }
+        
+        .error-subtitle {
+            font-size: 1.2rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .content {
+            padding: 20px;
+        }
+        
+        h1 {
+            font-size: 1.5rem;
+        }
+        
+        .error-title {
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1rem;
+        }
+        
+        .error-subtitle {
+            font-size: 1.1rem;
+        }
+        
+        .error-message p {
+            font-size: 0.9rem;
+        }
+    }
+</style>
