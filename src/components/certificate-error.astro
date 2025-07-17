@@ -56,7 +56,7 @@
     
     body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        background: #fff;
         min-height: 100vh;
         display: flex;
         align-items: center;
@@ -66,8 +66,6 @@
     
     .container {
         background: white;
-        border-radius: 20px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         max-width: 900px;
         width: 100%;
         min-height: 500px;
@@ -182,31 +180,33 @@
         right: 0;
         top: 0;
         bottom: 0;
-        width: 300px;
+        width: 600px;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 1;
+        z-index: 0;
     }
     
     .background-image img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-        opacity: 0.8;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.5;
+        z-index: 0;
     }
     
     .error-message-left {
         text-align: left;
-        font-size: 1.15rem;
+        font-size: 1.35rem;
         color: #111;
     }
     .error-message-left strong {
-        font-size: 1.25rem;
+        font-size: 1.45rem;
     }
     .error-message-main {
         text-align: left;
-        font-size: 1.25rem;
+        font-size: 1.45rem;
         margin-bottom: 8px;
         color: #205c36;
     }
